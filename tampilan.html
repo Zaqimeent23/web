@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asogas Dashboard</title>
+  <link rel="stylesheet" href="tampilan.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="logo_asogas.jpg" rel="stylesheet">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="assets/logo_asogas.jpg" alt="Asogas" />
+      <h2>Asogas</h2>
+    </div>
+    <ul>
+      <li><a href="#dashboard" class="active">Dashboard</a></li>
+      <li><a href="#stok">Stok Gas</a></li>
+      <li><a href="#pemesanan">Pemesanan</a></li>
+      <li><a href="#peminjaman">Peminjaman</a></li>
+      <li><a href="#pembayaran">Pembayaran</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <header class="topbar">
+      <h1>Dashboard Asogas</h1>
+    </header>
+
+    <section id="dashboard" class="card-grid">
+      <div class="card">
+        <h3>Stok Gas</h3>
+        <p>2 Jenis</p>
+      </div>
+      <div class="card">
+        <h3>Pemesanan</h3>
+        <p>Form Pemesanan</p>
+      </div>
+      <div class="card">
+        <h3>Peminjaman Tabung</h3>
+        <p>Data Peminjaman</p>
+      </div>
+      <div class="card">
+        <h3>Pembayaran</h3>
+        <p>Status Pembayaran</p>
+      </div>
+    </section>
+
+    <section id="stok" class="section">
+      <h2>Data Stok Gas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Jenis Gas</th>
+            <th>Stok Tersedia</th>
+            <th>Satuan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LPG 3 Kg</td>
+            <td>120</td>
+            <td>Tabung</td>
+          </tr>
+          <tr>
+            <td>LPG 12 Kg</td>
+            <td>75</td>
+            <td>Tabung</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="pemesanan" class="section">
+      <h2>Pemesanan Gas</h2>
+      <form id="formPemesanan">
+        <label>Nama Perusahaan</label>
+        <input type="text" name="nama" placeholder="PT Mitra Sejahtera" required>
+        <label>Jenis Gas</label>
+        <select name="jenis">
+          <option value="3kg">LPG 3 Kg</option>
+          <option value="12kg">LPG 12 Kg</option>
+        </select>
+        <label>Jumlah</label>
+        <input type="number" name="jumlah" required>
+        <button type="submit">Pesan</button>
+      </form>
+    </section>
+
+    <section id="peminjaman" class="section">
+      <h2>Peminjaman Tabung</h2>
+      <form id="formPeminjaman">
+        <label>Nama Perusahaan</label>
+        <input type="text" name="nama" required>
+        <label>Jumlah Tabung Dipinjam</label>
+        <input type="number" name="jumlah" required>
+        <label>Tanggal Pinjam</label>
+        <input type="date" name="tanggal" required>
+        <button type="submit">Pinjam</button>
+      </form>
+    </section>
+
+    <section id="pembayaran" class="section">
+      <h2>Proses Pembayaran</h2>
+      <form id="formPembayaran">
+        <label>Nama Perusahaan</label>
+        <input type="text" name="nama" required>
+        <label>Jumlah Tagihan (Rp)</label>
+        <input type="number" name="jumlah" required>
+        <label>Metode Pembayaran</label>
+        <select name="metode"required>
+          <option value="transfer">Transfer Bank</option>
+          <option value="tunai">Tunai</option>
+        </select>
+        <button type="submit">Bayar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="tampilan.js"></script>
+</body>
+</html>
